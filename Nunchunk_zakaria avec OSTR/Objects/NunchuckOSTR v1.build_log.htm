@@ -22,45 +22,20 @@ Dialog DLL:      TARMP1.DLL V1.24.0.0
  
 <h2>Project:</h2>
 U:\IT2R\Nunchunk_zakaria avec OSTR\NunchuckOSTR v1.uvprojx
-Project File Date:  03/22/2018
+Project File Date:  04/09/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 1 (build 61)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'Target 1'
-compiling GLCD_Fonts.c...
+Build target 'Target 1'
 compiling main.c...
-main.c(202): error:  #20: identifier "joy_x_axis" is undefined
-  	sprintf(affichage,"joystick x :%03d",joy_x_axis);	// du blabla
-main.c(206): error:  #20: identifier "joy_y_axis" is undefined
-  	sprintf(affichage,"joystick y :%03d",joy_y_axis);	// du blabla
-main.c(210): error:  #20: identifier "accel_x_axis" is undefined
-  	sprintf(affichage,"accel x :%04d",accel_x_axis);	// du blabla
-main.c(214): error:  #20: identifier "accel_y_axis" is undefined
-  	sprintf(affichage,"accel y :%04d",accel_y_axis);	// du blabla
-main.c(218): error:  #20: identifier "accel_z_axis" is undefined
-  	sprintf(affichage,"accel z :%04d",accel_z_axis);	// du blabla
-main.c(221): error:  #20: identifier "z_button" is undefined
-  	sprintf(affichage,"z buton :%01d",z_button);	// du blabla
-main.c(224): error:  #20: identifier "c_button" is undefined
-  		sprintf(affichage,"c buton :%01d",c_button);	// du blabla
-main.c(268): error:  #20: identifier "joy_x_axis" is undefined
-  					sprintf(affichage,"joystick x :%03d",joy_x_axis);	// du blabla
-main.c(270): error:  #20: identifier "joy_y_axis" is undefined
-  					if ( ((joy_y_axis <= 255) && (joy_y_axis>=200)) )	//joystick a fond en avant
-main.c(416): warning:  #1-D: last line of file ends without a newline
-  			
-main.c: 1 warning, 9 errors
-compiling RTX_Conf_CM.c...
-compiling GLCD_MCB1700.c...
-compiling I2C_LPC17xx.c...
-compiling UART_LPC17xx.c...
-compiling SSP_LPC17xx.c...
-compiling GPDMA_LPC17xx.c...
-assembling startup_LPC17xx.s...
-compiling GPIO_LPC17xx.c...
-compiling PIN_LPC17xx.c...
-compiling system_LPC17xx.c...
-".\Objects\NunchuckOSTR v1.axf" - 9 Error(s), 1 Warning(s).
+main.c(190): warning:  #177-D: variable "etat" was declared but never referenced
+  		static char etat=0;
+main.c(462): warning:  #1-D: last line of file ends without a newline
+  	}		
+main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=25944 RO-data=7432 RW-data=156 ZI-data=18772  
+".\Objects\NunchuckOSTR v1.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -86,12 +61,14 @@ Package Vendor: Keil
    * Component: SSP Version: 2.7.0
    * Component: I2C Version: 2.4.0
    * Component: USART Version: 2.6.0
+   * Component: LED Version: 1.0.0
    * Component: Graphic LCD Version: 1.0.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.MDK-Middleware.7.3.0.pack
-                ::Board Support:Graphic LCD:1.00 (API)
+                ::Board Support:LED:1.00 (API)
                 Keil MDK-ARM Professional Middleware for ARM Cortex-M based devices
+   * Component: LED Version: 1.00
    * Component: Graphic LCD Version: 1.00
 
 <h2>Collection of Component include folders:</h2>
@@ -162,14 +139,19 @@ Package Vendor: Keil
    * Component: Keil::CMSIS Driver:USART:2.6.0
       Source file:   RTE_Driver\UART_LPC17xx.c
 
+   * Component: Keil.MCB1700::Board Support:LED:1.0.0
+      Source file:   Boards\Keil\MCB1700\Common\LED_MCB1700.c
+
    * Component: Keil.MCB1700::Board Support:Graphic LCD:1.0.0
       Include file:  Boards\Keil\MCB1700\Common\GLCD_Config.h
       Source file:   Boards\Keil\MCB1700\Common\GLCD_Fonts.c
       Source file:   Boards\Keil\MCB1700\Common\GLCD_MCB1700.c
 
+   * Component: ::Board Support:LED:1.00 (API)
+      Include file:  Board\Board_LED.h
+
    * Component: ::Board Support:Graphic LCD:1.00 (API)
       Include file:  Board\Board_GLCD.h
-Target not created.
 Build Time Elapsed:  00:00:05
 </pre>
 </body>
