@@ -2,6 +2,7 @@
 ".\objects\main.o"
 ".\objects\glcd_fonts.o"
 ".\objects\glcd_mcb1700.o"
+".\objects\led_mcb1700.o"
 "C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.2.0\CMSIS\RTOS\RTX\LIB\ARM\RTX_CM3.lib"
 ".\objects\rtx_conf_cm.o"
 ".\objects\i2c_lpc17xx.o"
